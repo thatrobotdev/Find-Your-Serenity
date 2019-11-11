@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Find Your Serenity</title>
+	<meta name="description" content="How are you feeling today?" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk="
+	 crossorigin="anonymous" />
+	<link rel="stylesheet" href="index.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" sizes="192x192" href="icon-192x192.png">
+  <link rel="apple-touch-icon" href="icon-192x192.png">
+
+  <script src="db.js"></script>
+</head>
+
+<body>
+  <!-- Start main hero -->
+  <section class="hero is-dark is-fullheight" id="hero1">    
+    <!-- Start hero body -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h2 class="title tagline">Find your <b>Serenity</b>.</h2>
+        <h2 class="title is-4">How are you feeling today?</h2>
+
+        <!-- Tense/Relaxed -->
+        <label for="range_weight" class="title is-6">Relaxed</label> 
+        <input type="range" name="tension" id="tension" class="slider" min="0" max="10">
+        <span class="slider_label title is-6">Tense</span>
+        <br>
+
+        <!-- Calm/Stressed -->
+        <label for="range_weight" class="title is-6">Calm</label> 
+        <input type="range" name="diversion" id="diversion" class="slider" min="0" max="10">
+        <span class="slider_label title is-6">Stressed</span>
+        <br>
+
+        <!-- Lonely/Unlonely -->
+        <label for="range_weight" class="title is-6">Unlonely</label> 
+        <input type="range" name="social" id="social" class="slider" min="0" max="10">
+        <span class="slider_label title is-6">Lonely</span>
+        <br>
+
+        <!-- Irrational/Rational -->
+        <label for="range_weight" class="title is-6">Rational</label> 
+        <input type="range" name="cognitive" id="cognitive" class="slider" min="0" max="10">
+        <span class="slider_label title is-6">Irrational</span>
+        <br>
+
+        <!-- End Sliders -->
+
+        <div class="button-container">
+          <button class="button is-info btn-fade" id="go">Generate Activities</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start main hero -->
+  <section class="hero is-dark is-fullheight" id="hero2" style="display: none;">  
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title" id="datatitle">
+          Your activities have been generated!
+        </p>
+        <p class="subtitle" id="datasubtitle">
+          Using your slider data with your emotions, we generated 5 activities tailored for your mood! Use the navigation buttons below to explore your reccomendations!
+        </p>
+      </div>
+    </div>
+  
+    
+    <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li id="tab1">
+            <a onclick="switchTab(1);">1</a>
+          </li>
+          <li id="tab2">
+            <a onclick="switchTab(2);">2</a>
+          </li>
+          <li id="tab3">
+            <a onclick="switchTab(3);">3</a>
+          </li>
+          <li id="tab4">
+            <a onclick="switchTab(4);">4</a>
+          </li>
+          <li id="tab5">
+            <a onclick="switchTab(5);">5</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+</section>
+
+  <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
